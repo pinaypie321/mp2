@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fonts -->
+    <style>
+      body {
+        background: rgba(0, 0, 0, 0.4) url("img/background.png");
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: darken;
+        height: 100vh;
+        color: white;
+      }
+    </style>
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Recipe Website</a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#site_navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end me-3"
+          id="site_navbar"
+        >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" id="active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Nav Bar end -->
+    <!-- Body -->
+    <div class="container-fluid" id="home-body">
+      <div class="row">
+        <div class="col-lg-5 offset-lg-6">
+          <h1 id="home-header" class="display-4 text-center">
+            Discover Culinary Magic
+          </h1>
+
+          <p id="p-home">
+            "Welcome to a Culinary Journey: Where Every Recipe Tells a Story.
+            Discover the Art of Flavor, Unleash Your Inner Chef, and Savor
+            Moments Around the Table. Let's Dive into a World of Delicious
+            Possibilities!"
+          </p>
+
+          <div class="text-center">
+            <button class="btn" id="view-recipe-btn">View Recipes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Body end -->
+    <!-- Footer -->
+    <footer class="container-fluid">
+      <p>Copyright © MP2 Alrights Reserved.</p>
+    </footer>
+  </body>
+</html>
