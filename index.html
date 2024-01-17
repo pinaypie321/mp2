@@ -9,7 +9,7 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/home_styles.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,6 +29,7 @@
         background: rgba(0, 0, 0, 0.4) url("img/background.png");
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
         background-blend-mode: darken;
         height: 100vh;
         color: white;
@@ -90,7 +91,9 @@
           </p>
 
           <div class="text-center">
-            <button class="btn" id="view-recipe-btn">View Recipes</button>
+            <a href="pages/recipe.html" class="btn" id="view-recipe-btn"
+              >View Recipes</a
+            >
           </div>
         </div>
       </div>
