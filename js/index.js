@@ -32,6 +32,24 @@ app.get("/api/recipes/:id", (req, res) => {
   }
 });
 
+app.get("/api/recipes/category/:category", (req, res) => {
+  let filteredRecipes = [];
+  for (let i = 0; i < recipes.length; i++) {
+    if (
+      recipes[i].category.toLowerCase() === req.params.category.toLowerCase()
+    ) {
+      filteredRecipes.push(recipes[i]);
+    }
+  }
+
+  if (filteredRecipes.length > 0) {
+    res.send(filteredRecipes);
+  } else {
+    let err = "No recipes in that category found!";
+    res.status(404).send(err);
+  }
+});
+
 let port = 4000;
 app.listen(port);
 console.log("Starting server at port " + port + "...");

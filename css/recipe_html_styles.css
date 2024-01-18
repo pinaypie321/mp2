@@ -11,6 +11,12 @@
 }
 .navbar-brand {
   color: white;
+  font-family: "Lily Script One", cursive;
+  font-size: 35px;
+  padding-left: 10px;
+}
+.navbar-brand:hover {
+  color: orange !important;
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -24,6 +30,8 @@
 }
 .nav-item {
   font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
 .nav-link {
   color: white;
@@ -63,14 +71,38 @@
     margin-right: 0;
   }
 }
+/* Navbar End */
+/* Responsive */
+@media (max-width: 768px) {
+  #nav-bar {
+    text-align: center;
+  }
+  .nav-link {
+    text-align: center;
+  }
+
+  .container-fluid {
+    text-align: center;
+  }
+
+  .col-lg-5 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  #home-header {
+    font-size: 50px;
+  }
+
+  #p-home {
+    margin-right: 0;
+  }
+}
 /* Responsive End */
 
-.card-img-top {
-  object-fit: cover;
-  height: 200px;
-}
+/* Body */
 body {
-  background: rgba(0, 0, 0, 0.4) url("../img/background.png");
+  background: rgba(0, 0, 0, 0.7) url("../img/background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -80,8 +112,50 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
 }
+.page_header {
+  font-size: 60px;
+  font-weight: bold;
+}
+#page_link {
+  color: inherit;
+  text-decoration: none;
+}
+#search-btn {
+  background-color: orange;
+  color: black;
+}
+#search-btn :hover {
+  color: white;
+}
+/* Body End */
+
+/* Cards */
 .card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(16, 16, 16, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 10px 10px;
+  height: 525px;
+  margin-bottom: 10px;
 }
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+.card-body h2 {
+  color: orange;
+  font-size: 25px;
+  text-align: center;
+}
+.card-body p {
+  font-size: 18px;
+}
+.card-footer a {
+  background-color: orange;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: black;
+}
+.card-footer a:hover {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: orange;
+}
+/* Cards end */
