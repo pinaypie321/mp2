@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const recipeId = urlParams.get("id");
+
+        async function getRecipeDetails() {
+          let my_obj = await fetch(
+            "http://localhost:4000/api/recipes/" + recipeId
+          );
+          let my_text = await my_obj.text();
+          let recipeDetails = JSON.parse(my_text);
+
+          $("#recipe_name").text(recipeDetails.name);
+          $("#recipe_description").text(recipeDetails.description);
+          $("#recipe_cook_time").text(recipeDetails.cookTime);
+          $("#recipe_image").attr("src", "../img/" + recipeDetails.image);
+
+          // Format ingredients as a list
+          const ingredientsList = recipeDetails.ingredients.map(
+            (ingredient) => `<li>${ingredient}</li>`
+          );
+          $("#recipe_ingredients").html(`<ul>${ingredientsList.join("")}</ul>`);
+
+          // Format instructions as a numbered list
+          const instructionsList = recipeDetails.instructions.map(
+            (instruction, index) => `${index + 1}. ${instruction}</br>`
+          );
+          $("#recipe_instructions").html(
+            `<ol>${instructionsList.join("")}</ol>`
+          );
+        }
+
+        getRecipeDetails();
+      });
+    </script>
+    <title>Recipe Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <img id="recipe_image" class="img-fluid mb-4" alt="Recipe Image" />
+          <h1 class="text-center mb-4" id="recipe_name"></h1>
+          <p>
+            <strong>Description: </strong><span id="recipe_description"></span>
+          </p>
+          <p><strong>Cook Time: </strong><span id="recipe_cook_time"></span></p>
+        </div>
+        <div class="col-lg-6">
+          <p>
+            <strong>Ingredients: </strong><span id="recipe_ingredients"></span>
+          </p>
+          <p>
+            <strong>Instructions: </strong
+            ><span id="recipe_instructions"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -12,6 +12,12 @@
 }
 .navbar-brand {
   color: white;
+  font-family: "Lily Script One", cursive;
+  font-size: 35px;
+  padding-left: 10px;
+}
+.navbar-brand:hover {
+  color: orange !important;
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -25,6 +31,8 @@
 }
 .nav-item {
   font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
 .nav-link {
   color: white;
@@ -92,6 +100,7 @@ h1 {
 body {
   display: flex;
   min-height: 100vh;
+  font-family: "Raleway", sans-serif;
 }
 
 #home-body {
