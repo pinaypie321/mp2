@@ -22,13 +22,13 @@
           $("#recipe_cook_time").text(recipeDetails.cookTime);
           $("#recipe_image").attr("src", "../img/" + recipeDetails.image);
 
-          // Format ingredients as a list
+          $("iframe#recipe_tutorial").attr("src", recipeDetails.iframe);
+
           const ingredientsList = recipeDetails.ingredients.map(
             (ingredient) => `<li>${ingredient}</li>`
           );
           $("#recipe_ingredients").html(`<ul>${ingredientsList.join("")}</ul>`);
 
-          // Format instructions as a numbered list
           const instructionsList = recipeDetails.instructions.map(
             (instruction, index) => `${index + 1}. ${instruction}</br>`
           );
@@ -65,6 +65,9 @@
           <p>
             <strong>Instructions: </strong
             ><span id="recipe_instructions"></span>
+          </p>
+          <p>
+            <strong>Tutorial: </strong><iframe id="recipe_tutorial"></iframe>
           </p>
         </div>
       </div>

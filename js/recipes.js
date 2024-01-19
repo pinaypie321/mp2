@@ -36,6 +36,7 @@ const recipes = [
     cookTime: "25 minutes",
     image: "beef_stir_fry.jpg",
     category: "Beef",
+    iframe: "https://www.youtube.com/embed/Knw6pDVM_WI?si=cFwRxgHS75kmebfE",
   },
   {
     id: 1,
