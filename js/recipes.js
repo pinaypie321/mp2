@@ -308,6 +308,7 @@ const recipes = [
     cookTime: "30 minutes",
     image: "beef_mushroom_stroganoff.jpg",
     category: "Beef",
+    iframe: "https://www.youtube.com/embed/7r3dlmYUf4s?si=iNm_Fbq4ywIDDMrU",
   },
   {
     id: 9,
@@ -341,7 +342,7 @@ const recipes = [
     cookTime: "1 hour",
     image: "chicken_adobo.jpg",
     category: "Chicken",
-    iframe: "https://www.youtube.com/embed/dWKHOmUkML8?si=2IWj9qeATXUvAKIz",
+    iframe: "https://www.youtube.com/embed/wwapBsT0oc8?si=sSSnF2gkjl93v9Fr",
   },
   {
     id: 10,
