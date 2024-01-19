@@ -1,20 +1,82 @@
+body {
+  background: rgba(0, 0, 0, 0.7) url("../img/background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* background-blend-mode: lighten; */
+  height: 100vh;
+  /* animation: body-bg forwards;
+  animation-duration: 2s; */
+}
+
+.body-bg {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  /* filter: blur(8px); */
+  width: 100%;
+  height: 100vh;
+  right: 0;
+  z-index: -1;
+  animation: body-bg 2s forwards;
+}
+
+@keyframes body-bg {
+  from {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
 /* Navbar */
 .navbar {
-  background: linear-gradient(
-    to bottom,
-    rgb(16, 16, 16, 0.9),
-    rgb(21, 21, 21, 0.9)
-  );
   position: fixed;
-  top: 0;
+  top: -80px;
   z-index: 2;
   width: 100%;
+  animation: navbar 2s forwards;
 }
+
+.nav-blur {
+  filter: blur(5px);
+  animation: nav-blur 2s forwards;
+}
+
+@keyframes nav-blur {
+  from {
+    filter: blur(5px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
+@keyframes navbar {
+  from {
+    top: -80px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.navbar-bg {
+  position: fixed;
+  background-color: red;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.8);
+  filter: blur(5px);
+  z-index: -1;
+}
+
 .navbar-brand {
   color: white;
   font-family: "Lily Script One", cursive;
   font-size: 35px;
   padding-left: 10px;
+  transition: 0.5s;
 }
 .navbar-brand:hover {
   color: orange !important;
@@ -81,18 +143,36 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100%;
+}
 
-  background: linear-gradient(
-    to bottom,
-    rgb(16, 16, 16, 0.9),
-    rgb(21, 21, 21, 0.9)
-  );
+footer .footer-bg {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 50px;
+  filter: blur(5px);
+  z-index: -1;
 }
-footer {
-  margin-top: auto;
+
+footer p {
+  font-family: "Raleway", sans-serif;
+  filter: blur(5px);
+  animation: footer-p 2s forwards;
 }
+
+@keyframes footer-p {
+  from {
+    filter: blur(5px);
+  }
+  to {
+    filter: blur(0);
+  }
+}
+
 /* Footer End */
-/* Home Body */
+
 h1 {
   color: white;
   margin-top: 100px;
@@ -109,11 +189,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  filter: blur(8px);
+  animation: home-body 2s forwards;
 }
 
-#home-body {
-  text-align: center;
+@keyframes home-body {
+  from {
+    filter: blur(8px);
+  }
+  to {
+    filter: blur(0);
+  }
 }
+
 #home-header {
   color: white;
   font-family: "Lily Script One", cursive;
@@ -124,8 +212,15 @@ body {
   font-size: 20px;
 }
 #view-recipe-btn {
+  font-size: 32px;
   color: white;
-  font-weight: 200;
-  background-color: orange;
+  font-weight: bold;
+  background-color: #da8649;
+  transition: 0.5s;
+}
+
+#view-recipe-btn:hover {
+  color: #da8649;
+  background-color: #54351e;
 }
 /* Home End */

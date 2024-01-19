@@ -1,3 +1,14 @@
+body.recipe-details {
+  background: rgba(0, 0, 0, 0.7) url("../img/background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  height: 100vh;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
 .navbar {
   background: linear-gradient(
     to bottom,
@@ -43,6 +54,10 @@
 }
 #active {
   color: orange !important;
+}
+
+h1 #page_link {
+  font-family: "Lily Script One", cursive;
 }
 /* Navbar End */
 /* Responsive */
@@ -100,18 +115,6 @@
 }
 /* Responsive End */
 
-/* Body */
-body {
-  background: rgba(0, 0, 0, 0.7) url("../img/background.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-blend-mode: darken;
-  height: 100vh;
-  color: white;
-  font-family: "Raleway", sans-serif;
-  font-size: 20px;
-}
 .page_header {
   font-size: 60px;
   font-weight: bold;
@@ -161,9 +164,64 @@ body {
 /* Cards end */
 
 /* recipe_details.html */
-.recipe-details {
-  color: white;
-  background-color: rgb(68, 67, 67);
+.close {
+  top: 10px;
+  right: 20px;
+  position: absolute;
+  /* background-color: red; */
+  width: 40px;
+  height: 40px;
+}
+
+.close .left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: white;
+  width: 100%;
+  height: 10px;
+  transform: rotateZ(45deg);
+  transition: 0.5s;
+}
+
+.close .right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: white;
+  width: 100%;
+  height: 10px;
+  transform: rotateZ(-45deg);
+  transition: 0.5s;
+  /* animation: right-close 1s linear; */
+}
+
+.close:hover .right {
+  transform: rotateZ(45deg);
+  background-color: #da8649;
+}
+
+.close:hover .left {
+  transform: rotateZ(-45deg);
+  background-color: #da8649;
+}
+/* @keyframes right-close {
+  from {
+    transform: rotateZ(-45deg);
+  }
+  to {
+    transform: rotateZ(45deg);
+  }
+} */
+/* .close a .left{
+
+} */
+
+body.recipe-details #recipe_name {
+  font-family: "Lily Script One", cursive;
+  color: #da8649;
 }
 
 .yt-container {
@@ -176,3 +234,35 @@ body {
   width: 100%;
   height: 100%;
 }
+
+/* Footer */
+/* footer {
+
+} */
+footer {
+  position: absolute;
+}
+
+footer p {
+  z-index: 1;
+  position: absolute;
+  top: 15px;
+  left: 40%;
+  font-size: 15px;
+}
+
+footer .footer-bg {
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  filter: blur(8px);
+  background: linear-gradient(
+    to bottom,
+    rgb(16, 16, 16, 0.9),
+    rgb(21, 21, 21, 0.9)
+  );
+}
+/* footer {
+  margin-top: auto;
+} */
+/* Footer End */
