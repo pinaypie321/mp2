@@ -6,41 +6,8 @@
     <link rel="stylesheet" href="../css/recipe_html_styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        const urlParams = new URLSearchParams(window.location.search);
-        const recipeId = urlParams.get("id");
 
-        async function getRecipeDetails() {
-          let my_obj = await fetch(
-            "http://localhost:4000/api/recipes/" + recipeId
-          );
-          let my_text = await my_obj.text();
-          let recipeDetails = JSON.parse(my_text);
-
-          $("#recipe_name").text(recipeDetails.name);
-          $("#recipe_description").text(recipeDetails.description);
-          $("#recipe_cook_time").text(recipeDetails.cookTime);
-          $("#recipe_image").attr("src", "../img/" + recipeDetails.image);
-
-          $("iframe#recipe_tutorial").attr("src", recipeDetails.iframe);
-
-          const ingredientsList = recipeDetails.ingredients.map(
-            (ingredient) => `<li>${ingredient}</li>`
-          );
-          $("#recipe_ingredients").html(`<ul>${ingredientsList.join("")}</ul>`);
-
-          const instructionsList = recipeDetails.instructions.map(
-            (instruction, index) => `${index + 1}. ${instruction}</br>`
-          );
-          $("#recipe_instructions").html(
-            `<ol>${instructionsList.join("")}</ol>`
-          );
-        }
-
-        getRecipeDetails();
-      });
-    </script>
+    <script src="../js/recipe_details_html.js"></script>
     <title>Recipe Details</title>
     <link
       rel="stylesheet"
