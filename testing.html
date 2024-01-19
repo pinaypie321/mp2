@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      iframe {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      #frame {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+
+    <script>
+      async function getData(data) {
+        let obj = await fetch(data);
+        let text = await obj.text();
+        let recipes = JSON.parse(text);
+
+        for (let i = 0; i < recipes.length; i++) {
+          let row =
+            "<tr>" +
+            "<td>" +
+            recipes[i].dish +
+            "</td>" +
+            "<td>" +
+            recipes[i].chef +
+            "</td>" +
+            "</tr>";
+
+          let frm = recipes[i].video;
+
+          $("#foods").append(row);
+          $("#frame").append(frm);
+        }
+      }
+
+      getData("http://localhost:3001/api/recipes");
+    </script>
+  </head>
+  <body>
+    <h1>Recipes</h1>
+    <table>
+      <tr>
+        <th>dish</th>
+        <th>chef</th>
+      </tr>
+      <tbody id="foods"></tbody>
+    </table>
+    <br />
+    <div id="frame"></div>
+  </body>
+</html>

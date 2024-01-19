@@ -26,6 +26,62 @@
     <!-- Fonts -->
 
     <title>Recipes</title>
+
+    <style>
+      iframe {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      #frame {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+
+    <script>
+      // $(".view-recipe").click(function () {
+      //   alert("Hello World");
+      // });
+
+      $(document).ready(function () {
+        $(".view-recipe").click(function (e) {
+          e.preventDefault();
+        });
+      });
+
+      async function getData(data) {
+        let obj = await fetch(data);
+        let text = await obj.text();
+        let recipes = JSON.parse(text);
+
+        for (let i = 0; i < recipes.length; i++) {
+          let cards =
+            '<div class="col-lg-3"><div class="card">' +
+            '<img src="' +
+            recipes[i].image +
+            '" class="card-img-top" alt="donut" /><div class="card-body text-center">' +
+            "<h5>" +
+            recipes[i].dish +
+            "</h5>" +
+            '<p class="card-text text-dark">chef: ' +
+            recipes[i].chef +
+            "</p>" +
+            '</div><div class="card-footer text-center"><a href="' +
+            data +
+            "/" +
+            recipes[i].id +
+            '" class="button-submit btn btn-dark view-recipe">View</a></div></div></div>';
+
+          // let frm = recipes[i].video;
+
+          $("#cards").append(cards);
+          // $("#frame").append(frm);
+        }
+      }
+
+      getData("http://localhost:3001/api/recipes");
+    </script>
   </head>
   <body>
     <!-- Nav Bar -->
@@ -74,64 +130,7 @@
           </form>
         </div>
       </div>
-      <div class="row mt-3">
-        <div class="col-lg-3">
-          <div class="card">
-            <img src="donut.jpg" class="card-img-top" alt="donut" />
-            <div class="card-body">
-              <p class="card-text text-dark">
-                Indulge in a delectable array of freshly baked pastries now
-                available for sale, each bite a symphony of flavor.
-              </p>
-            </div>
-            <div class="card-footer text-center">
-              <a href="book.html" class="button-submit btn btn-dark">View</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card">
-            <img src="donut.jpg" class="card-img-top" alt="donut" />
-            <div class="card-body">
-              <p class="card-text text-dark">
-                Indulge in a delectable array of freshly baked pastries now
-                available for sale, each bite a symphony of flavor.
-              </p>
-            </div>
-            <div class="card-footer text-center">
-              <a href="book.html" class="button-submit btn btn-dark">View</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card">
-            <img src="donut.jpg" class="card-img-top" alt="donut" />
-            <div class="card-body">
-              <p class="card-text text-dark">
-                Indulge in a delectable array of freshly baked pastries now
-                available for sale, each bite a symphony of flavor.
-              </p>
-            </div>
-            <div class="card-footer text-center">
-              <a href="book.html" class="button-submit btn btn-dark">View</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="card">
-            <img src="donut.jpg" class="card-img-top" alt="donut" />
-            <div class="card-body">
-              <p class="card-text text-dark">
-                Indulge in a delectable array of freshly baked pastries now
-                available for sale, each bite a symphony of flavor.
-              </p>
-            </div>
-            <div class="card-footer text-center">
-              <a href="book.html" class="button-submit btn btn-dark">View</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="row mt-3" id="cards"></div>
     </div>
 
     <!-- Body end -->
