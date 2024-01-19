@@ -36,7 +36,7 @@ const recipes = [
     cookTime: "25 minutes",
     image: "beef_stir_fry.jpg",
     category: "Beef",
-    iframe: "https://www.youtube.com/embed/Knw6pDVM_WI?si=cFwRxgHS75kmebfE",
+    iframe: "https://www.youtube.com/embed/cyS8ycmGs1U?si=tSq-ThrwMOXCHIUu",
   },
   {
     id: 1,
@@ -68,6 +68,7 @@ const recipes = [
     cookTime: "30 minutes",
     image: "chicken_karaage.jpg",
     category: "Chicken",
+    iframe: "https://www.youtube.com/embed/Knw6pDVM_WI?si=cFwRxgHS75kmebfE",
   },
   {
     id: 2,
@@ -97,6 +98,7 @@ const recipes = [
     cookTime: "1 hour",
     image: "beef_steak.jpg",
     category: "Beef",
+    iframe: "https://www.youtube.com/embed/xH746HwUlbQ?si=-aPSBxV0fWEsePS6",
   },
   {
     id: 3,
@@ -131,6 +133,7 @@ const recipes = [
     cookTime: "45 minutes",
     image: "kusido.jpg",
     category: "Fish",
+    iframe: "https://www.youtube.com/embed/-eLubho5Rh4?si=G-96-YHWQFkrjovq",
   },
   {
     id: 4,
@@ -163,6 +166,7 @@ const recipes = [
     cookTime: "2-3 hours",
     image: "nilagang_baka.jpg",
     category: "Beef",
+    iframe: "https://www.youtube.com/embed/dqtslBVdQ2Q?si=QgirVB9kQwx4zvfp",
   },
   {
     id: 5,
@@ -197,6 +201,7 @@ const recipes = [
     cookTime: "30 minutes",
     image: "pork_sisig.jpg",
     category: "Pork",
+    iframe: "https://www.youtube.com/embed/kapD-91ZUH8?si=K_KxizGwIITAA4Kv",
   },
   {
     id: 6,
@@ -235,6 +240,7 @@ const recipes = [
     cookTime: "30 minutes",
     image: "escabeche.jpg",
     category: "Fish",
+    iframe: "https://www.youtube.com/embed/4tQd79faZVE?si=w0RhprRu7qt-BqbM",
   },
   {
     id: 7,
@@ -265,6 +271,7 @@ const recipes = [
     cookTime: "35 minutes",
     image: "garlic_butter_baked_chicken.jpg",
     category: "Chicken",
+    iframe: "https://www.youtube.com/embed/eF4jk8yelMc?si=A-nvhCr98rgujTK-",
   },
   {
     id: 8,
@@ -334,6 +341,7 @@ const recipes = [
     cookTime: "1 hour",
     image: "chicken_adobo.jpg",
     category: "Chicken",
+    iframe: "https://www.youtube.com/embed/dWKHOmUkML8?si=2IWj9qeATXUvAKIz",
   },
   {
     id: 10,
@@ -362,6 +370,7 @@ const recipes = [
     cookTime: "45 minutes",
     image: "pork_sinigang.jpg",
     category: "Pork",
+    iframe: "https://www.youtube.com/embed/CzBF1IhIn1M?si=FlZUw_PxSTq-G6pV",
   },
   {
     id: 11,
@@ -395,6 +404,7 @@ const recipes = [
     cookTime: "45 minutes",
     image: "pinakbet.jpg",
     category: "Vegetable",
+    iframe: "https://www.youtube.com/embed/OzfTQZVYKmY?si=hkH4YrJZMNl5ZDTJ",
   },
   {
     id: 12,
@@ -426,6 +436,7 @@ const recipes = [
     cookTime: "30 minutes",
     image: "paksiw_na_isda.jpg",
     category: "Fish",
+    iframe: "https://www.youtube.com/embed/IM2jDoGwX_w?si=DqNA-8VElOctdvqE",
   },
   {
     id: 13,
@@ -466,6 +477,7 @@ const recipes = [
     cookTime: "30 minutes",
     image: "chopsuey.jpg",
     category: "Vegetable",
+    iframe: "https://www.youtube.com/embed/kDtSZTzkGYM?si=uwjOnp38LJyrgtMR",
   },
   {
     id: 14,
@@ -488,6 +500,7 @@ const recipes = [
     cookTime: "1.5 hours",
     image: "lechon_kawali.jpg",
     category: "Pork",
+    iframe: "https://www.youtube.com/embed/MPY9EmLFaR0?si=0MKRAFxLm1RkLCfo",
   },
   {
     id: 15,
@@ -522,6 +535,7 @@ const recipes = [
     cookTime: "45 minutes",
     image: "menudo.jpg",
     category: "Pork",
+    iframe: "https://www.youtube.com/embed/7i_RmZwkNpI?si=1QTcelY9F29YMmU5",
   },
   {
     id: 16,
@@ -548,6 +562,7 @@ const recipes = [
     cookTime: "30 minutes",
     image: "tortang_talong.jpg",
     category: "Vegetable",
+    iframe: "https://www.youtube.com/embed/bCWkcaQC9Ck?si=MitACgG3IC-CDwcf",
   },
   {
     id: 17,
@@ -580,6 +595,7 @@ const recipes = [
     cookTime: "20 minutes",
     image: "mongolian_beef.jpg",
     category: "Beef",
+    iframe: "https://www.youtube.com/embed/zsAut4x1qt4?si=0UCkV80VsPKDtWrd",
   },
   {
     id: 18,
@@ -612,6 +628,7 @@ const recipes = [
     cookTime: "1 hour",
     image: "adobong_manok_gata.jpg",
     category: "Chicken",
+    iframe: "https://www.youtube.com/embed/hULeqITt_S4?si=MiZohho1S3dC0A81",
   },
   {
     id: 19,
@@ -639,6 +656,7 @@ const recipes = [
     cookTime: "20 minutes",
     image: "beef_tapa.jpg",
     category: "Beef",
+    iframe: "https://www.youtube.com/embed/BuyJxuHPy1c?si=4jSqHb74c5HDt7aj",
   },
 ];
 
