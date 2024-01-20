@@ -1,15 +1,13 @@
-body {
+body#home-page {
   background: rgba(0, 0, 0, 0.7) url("../img/background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   /* background-blend-mode: lighten; */
   height: 100vh;
-  /* animation: body-bg forwards;
-  animation-duration: 2s; */
 }
 
-.body-bg {
+body#home-page .body-bg {
   position: absolute;
   background: rgba(0, 0, 0, 0.1);
   /* filter: blur(8px); */
@@ -35,12 +33,12 @@ body {
   top: -80px;
   z-index: 2;
   width: 100%;
-  animation: navbar 2s forwards;
+  animation: navbar 0.5s forwards;
 }
 
 .nav-blur {
   filter: blur(5px);
-  animation: nav-blur 2s forwards;
+  animation: nav-blur 1s forwards;
 }
 
 @keyframes nav-blur {
@@ -159,7 +157,7 @@ footer .footer-bg {
 footer p {
   font-family: "Raleway", sans-serif;
   filter: blur(5px);
-  animation: footer-p 2s forwards;
+  animation: footer-p 0.5s forwards;
 }
 
 @keyframes footer-p {
@@ -223,4 +221,5 @@ body {
   color: #da8649;
   background-color: #54351e;
 }
+
 /* Home End */
