@@ -258,9 +258,13 @@ body#about-page .about-content {
 }
 
 /* event page */
+.event-section {
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+}
+
 .upper-bg {
   position: relative;
-  font-family: "Raleway", sans-serif;
 }
 
 .upper-bg .img {
@@ -280,6 +284,7 @@ body#about-page .about-content {
   text-align: center;
   width: 50%;
   height: 50%;
+  padding-top: 20px;
   /* background-color: red; */
   position: absolute;
   top: 0;
@@ -306,7 +311,24 @@ body#about-page .about-content {
   position: absolute;
   left: 0;
   right: 0;
-  top: 95%;
+  top: 90%;
   margin: auto;
   text-align: center;
+}
+
+#reg-btn {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  background-color: #da8649;
+  transition: 0.5s;
+}
+
+#reg-btn:hover {
+  color: #da8649;
+  background-color: #54351e;
+}
+
+.event-content {
+  padding-top: 100px;
 }
