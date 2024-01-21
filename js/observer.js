@@ -17,3 +17,23 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+const blogs = document.querySelectorAll(".anim");
+
+const observeBlog = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show-blog", entry.isIntersecting);
+      if (entry.isIntersecting) {
+        observeBlog.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.7,
+  }
+);
+
+blogs.forEach((blog) => {
+  observeBlog.observe(blog);
+});

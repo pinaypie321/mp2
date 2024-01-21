@@ -332,3 +332,132 @@ body#about-page .about-content {
 .event-content {
   padding-top: 100px;
 }
+
+/* Blog page */
+.blog-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.blog-title {
+  padding-top: 140px;
+  font-family: "Lily Script One", cursive;
+}
+
+.blog-title span {
+  color: #da8649;
+}
+
+.blog .anim {
+  /* transform: translateY(100%); */
+  opacity: 0;
+}
+
+.blog .show-blog {
+  animation: show-blog 0.5s forwards;
+}
+
+@keyframes show-blog {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Contact Page */
+body.contact {
+  background: rgba(0, 0, 0, 0.8) url("../img/background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  font-family: "Raleway", sans-serif;
+}
+
+.contact-section {
+  width: 100%;
+  height: 100vh;
+  height: 100vh;
+}
+
+.contact-section .content {
+  padding-top: 100px;
+  margin: auto;
+  z-index: 1;
+  height: 100%;
+  color: white;
+  /* transform: translateY(500px); */
+  /* background-color: red; */
+}
+
+.contact-section .content h3 {
+  position: absolute;
+  width: 40%;
+  /* background-color: green; */
+  top: 140px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  /* padding-top: -900px; */
+  font-family: "Lily Script One", cursive;
+  color: white;
+}
+
+.content .row {
+  padding-top: 200px;
+  /* background-color: yellow; */
+  height: 92%;
+  position: relative;
+}
+
+.contact-section .top-left {
+  margin-top: 10px;
+  /* background-color: red; */
+  height: 40%;
+  position: relative;
+}
+
+.contact-icons {
+  position: absolute;
+}
+
+.contact-icons span {
+  margin-left: 20px;
+}
+
+.contact-icons:nth-child(1) {
+  /* background-color: #54351e; */
+  width: 40%;
+  top: 0;
+}
+
+.contact-icons:nth-child(2) {
+  /* background-color: #f5b78a; */
+  top: 40%;
+  width: 40%;
+}
+
+.contact-icons:nth-child(2) img {
+  /* background-color: black; */
+  margin-left: 5px;
+}
+
+.contact-icons:nth-child(3) {
+  /* background-color: #54351e; */
+  bottom: 0;
+  width: 40%;
+}
+
+.contact-section .bottom-left {
+  margin-top: 10px;
+  /* background-color: red; */
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
