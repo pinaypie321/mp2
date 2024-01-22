@@ -11,7 +11,9 @@ async function getData(data) {
     );
 
     let categoryDropdown = $("#categoryFilter");
-    categoryDropdown.empty(); // Clear existing options
+    categoryDropdown.empty();
+
+    categoryDropdown.append(`<option value="all">All</option>`);
 
     uniqueCategories.forEach((category) => {
       categoryDropdown.append(
@@ -67,12 +69,12 @@ function filterByCategory() {
   const selectedCategory = $("#categoryFilter").val().toLowerCase();
   let filteredRecipes;
 
-  if (selectedCategory) {
+  if (selectedCategory === "all") {
+    filteredRecipes = recipesData;
+  } else {
     filteredRecipes = recipesData.filter(
       (recipe) => recipe.category.toLowerCase() === selectedCategory
     );
-  } else {
-    filteredRecipes = recipesData;
   }
 
   displayRecipes(filteredRecipes);

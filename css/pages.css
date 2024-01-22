@@ -22,7 +22,6 @@
 
 .navbar-bg {
   position: fixed;
-  background-color: red;
   width: 100%;
   height: 80px;
   background: rgba(0, 0, 0, 0.8);
@@ -38,7 +37,7 @@
   transition: 0.5s;
 }
 .navbar-brand:hover {
-  color: orange !important;
+  color: #da8649 !important;
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -64,7 +63,7 @@
   text-align: right;
 }
 #active {
-  color: orange !important;
+  color: #da8649 !important;
 }
 /* Navbar End */
 
@@ -328,7 +327,10 @@ body#about-page .about-content {
   color: #da8649;
   background-color: #54351e;
 }
-
+#sign-up {
+  border: #da8649;
+  background-color: #da8649;
+}
 .event-content {
   padding-top: 100px;
 }
@@ -460,4 +462,10 @@ body.contact {
   width: 35%;
   display: flex;
   justify-content: space-between;
+}
+
+#send-btn {
+  background-color: #da8649;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
 }

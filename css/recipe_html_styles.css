@@ -124,7 +124,7 @@ h1 #page_link {
   text-decoration: none;
 }
 #search-btn {
-  background-color: orange;
+  background-color: #da8649;
   color: black;
 }
 #search-btn :hover {
@@ -148,7 +148,7 @@ h1 #page_link {
   height: 200px;
 }
 .card-body h2 {
-  color: orange;
+  color: #da8649;
   font-size: 25px;
   text-align: center;
 }
@@ -156,13 +156,14 @@ h1 #page_link {
   font-size: 18px;
 }
 .card-footer a {
-  background-color: orange;
+  background-color: #da8649;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  color: black;
+  color: white;
 }
 .card-footer a:hover {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: orange;
+  border: 1px solid #da8649;
+  color: #da8649;
+  background-color: #54351e;
 }
 /* Cards end */
 
