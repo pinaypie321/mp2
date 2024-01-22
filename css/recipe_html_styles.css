@@ -130,6 +130,9 @@ h1 #page_link {
 #search-btn :hover {
   color: white;
 }
+#none-found {
+  font-size: 50px;
+}
 /* Body End */
 
 /* Cards */

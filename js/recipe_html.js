@@ -42,7 +42,7 @@ function displayRecipes(recipes) {
   }
 }
 
-getData("https://mp2-api-recipe.onrender.com");
+getData("https://mp2-api-recipe.onrender.com/api/recipes/");
 
 function searchRecipes() {
   const searchTerm = $("#searchInput").val().toLowerCase();
@@ -66,7 +66,7 @@ function searchRecipes() {
 
   if (found == false) {
     $("#recipe_gallery").append(
-      "<div class='row'><div class='col-lg-6 offset-lg-3 text-center'><p>No recipe found</p></div></div>"
+      "<div class='row'><div class='col-lg-6 offset-lg-3 text-center'><h1>No recipe found</h1></div></div>"
     );
   }
 }
