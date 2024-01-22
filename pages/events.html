@@ -30,6 +30,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
       rel="stylesheet"
     />
+    <script src="../js/events_html.js"></script>
 
     <title>About</title>
   </head>
@@ -119,28 +120,28 @@
                   ></button>
                 </div>
                 <div class="modal-body">
-                  <form>
-                    <div class="mb-3 text-start">
-                      <label for="recipient-name" class="col-form-label"
-                        >email</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="recipient-name"
-                      />
-                    </div>
-                    <div class="mb-3 text-start">
-                      <label for="message-text" class="col-form-label"
-                        >full name</label
-                      >
-                      <input
+                  <form id="accountForm">
+                    <label for="fullName">Full Name:</label>
+                    <input
                       type="text"
-                        class="form-control"
-                        id="message-text"
-                      ></input>
-                    </div>
+                      id="fullName"
+                      name="fullName"
+                      placeholder="Allison Burgers"
+                      required
+                      class="form-control"
+                    />
+                    <br />
+                    <label for="email">Email:</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="allisonburgers@example.com"
+                      required
+                      class="form-control"
+                    />
                   </form>
+                  <div id="result"></div>
                 </div>
                 <div class="modal-footer">
                   <button
@@ -150,7 +151,11 @@
                   >
                     Close
                   </button>
-                  <button type="button" class="btn btn-primary">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="signUp()"
+                  >
                     Register
                   </button>
                 </div>
