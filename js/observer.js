@@ -30,7 +30,7 @@ const observeBlog = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.7,
+    threshold: 0.6,
   }
 );
 

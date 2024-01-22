@@ -10,7 +10,6 @@ body#home-page {
 body#home-page .body-bg {
   position: absolute;
   background: rgba(0, 0, 0, 0.1);
-  /* filter: blur(8px); */
   width: 100%;
   height: 100vh;
   right: 0;
@@ -34,6 +33,92 @@ body#home-page .body-bg {
   z-index: 2;
   width: 100%;
   animation: navbar 0.5s forwards;
+}
+
+.navbar-toggler {
+  /* background-color: green; */
+  width: 30px;
+  height: 25px;
+  position: relative;
+  border: none !important;
+}
+
+.navbar-toggler .top {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 5px;
+  top: 0;
+  transform: translateX(-12px);
+}
+
+.navbar-toggler .top.active {
+  animation: tg-top 0.2s linear forwards;
+}
+
+@keyframes tg-top {
+  from {
+    top: 0;
+    rotate: 0deg;
+    transform: translateX(-12px);
+  }
+  to {
+    top: 80%;
+    rotate: 35deg;
+    transform: translateX(-15px);
+  }
+}
+
+.navbar-toggler .middle {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 5px;
+  bottom: 40%;
+  transform: translateX(-12px);
+}
+
+.navbar-toggler .middle.active {
+  animation: tg-mid 0.2s linear forwards;
+}
+
+@keyframes tg-mid {
+  from {
+    bottom: 40%;
+    rotate: 0deg;
+    transform: translateX(-12px);
+  }
+  to {
+    bottom: 0;
+    rotate: 35deg;
+    transform: translateX(-15px);
+  }
+}
+
+.navbar-toggler .bottom {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 5px;
+  bottom: 0;
+  transform: translateX(-12px);
+}
+
+.navbar-toggler .bottom.active {
+  animation: tg-bottom 0.2s linear forwards;
+}
+
+@keyframes tg-bottom {
+  from {
+    bottom: 0;
+    rotate: 0deg;
+    transform: translateX(-12px);
+  }
+  to {
+    bottom: 70%;
+    rotate: -35deg;
+    transform: translateX(-15px);
+  }
 }
 
 .nav-blur {
@@ -69,6 +154,27 @@ body#home-page .body-bg {
   z-index: -1;
 }
 
+.navbar-bg.active {
+  height: 100%;
+  background-color: #54351e;
+  animation: nv-bg-active 1s forwards;
+}
+
+@keyframes nv-bg-active {
+  from {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  to {
+    background-color: #54351e;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #site_navbar ul {
+    padding: 185px 0;
+  }
+}
+
 .navbar-brand {
   color: white;
   font-family: "Lily Script One", cursive;
@@ -76,6 +182,7 @@ body#home-page .body-bg {
   padding-left: 10px;
   transition: 0.5s;
 }
+
 .navbar-brand:hover {
   color: orange !important;
 }
@@ -223,3 +330,35 @@ body {
 }
 
 /* Home End */
+
+/* Mobile Response */
+@media only screen and (max-width: 600px) {
+  /* home page */
+  body#home-page {
+    background-blend-mode: darken;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  #home-header {
+    font-size: 36px;
+  }
+
+  #p-home {
+    font-size: 18px;
+  }
+
+  #view-recipe-btn {
+    font-size: 20px;
+  }
+
+  #home-body {
+    transform: translateY(-100px);
+  }
+
+  footer {
+    font-size: 10px;
+  }
+}

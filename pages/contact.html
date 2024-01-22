@@ -20,6 +20,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="../js/navbar.js"></script>
+
     <!-- external CSS -->
     <link rel="stylesheet" href="../css/pages.css" />
 
@@ -42,16 +44,22 @@
   <body class="contact">
     <div class="dark-bg"></div>
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg">
+
+    <nav class="navbar navbar-expand-sm">
       <div class="navbar-bg"></div>
       <div class="container-fluid nav-blur">
-        <a class="navbar-brand" href="../index.html">FoodGallery</a>
+        <a class="navbar-brand" href="index.html">FoodGallery</a>
         <button
           class="navbar-toggler"
           data-bs-toggle="collapse"
           data-bs-target="#site_navbar"
+          id="nv-tog"
         >
-          <span class="navbar-toggler-icon"></span>
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <!-- <div id="tog-icon"></div> -->
+          <div class="top"></div>
+          <div class="middle"></div>
+          <div class="bottom"></div>
         </button>
         <div
           class="collapse navbar-collapse justify-content-end me-3"
@@ -86,8 +94,8 @@
           hear from you!
         </h3>
 
-        <form class="row">
-          <div class="col-lg-6 h-100">
+        <form class="row flex-column-reverse flex-lg-row h-100">
+          <div class="col-lg-6 left">
             <div class="top-left">
               <div class="contact-icons">
                 <img src="../img/phone-icon.svg" alt="" />
@@ -108,7 +116,7 @@
               <img src="../img/twitter-icon.svg" alt="" />
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 mb-5 right">
             <label for="basic-url" class="form-label">EMAIL</label>
             <div class="input-group mb-3">
               <input
@@ -129,7 +137,7 @@
                 rows="3"
               ></textarea>
             </div>
-            <div class="d-flex justify-content-end mb-5">
+            <div class="d-flex justify-content-end">
               <button class="btn btn-primary">Send</button>
             </div>
           </div>

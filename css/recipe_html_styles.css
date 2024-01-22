@@ -1,5 +1,5 @@
 body.recipe-details {
-  background: rgba(0, 0, 0, 0.7) url("../img/background.png");
+  background: rgba(0, 0, 0, 0.8) url("../img/background.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -116,7 +116,7 @@ h1 #page_link {
 /* Responsive End */
 
 .page_header {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
 }
 #page_link {
@@ -225,9 +225,10 @@ body.recipe-details #recipe_name {
 }
 
 .yt-container {
+  margin: 30px auto;
   background-color: red;
   width: 500px;
-  height: 500px;
+  height: 300px;
 }
 
 .yt-container iframe {
@@ -306,3 +307,56 @@ footer p {
 }
 
 /* Footer End */
+
+/* Mobile Response */
+@media only screen and (max-width: 600px) {
+  /* recipe_details page */
+
+  .close {
+    width: 30px;
+    height: 30px;
+  }
+
+  #page_link {
+    font-size: 36px;
+  }
+
+  #recipe_gallery .card {
+    /* width: 200px; */
+    height: auto;
+  }
+
+  #recipe_gallery .card img {
+    height: 100px;
+  }
+
+  #recipe_gallery .card h2 {
+    font-size: 12px;
+  }
+
+  #recipe_gallery .card p {
+    font-size: 10px;
+  }
+
+  #recipe_gallery .card .btn {
+    font-size: 10px;
+  }
+
+  .my-4 .input-group select {
+    font-size: 12px;
+  }
+
+  .my-4 .input-group .btn {
+    font-size: 12px;
+  }
+
+  .my-4 .input-group input {
+    font-size: 12px;
+  }
+
+  .yt-container {
+    background-color: red;
+    width: 300px;
+    height: 200px;
+  }
+}

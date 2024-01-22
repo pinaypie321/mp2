@@ -23,13 +23,13 @@ function displayRecipes(recipes) {
 
   for (let i = 0; i < recipes.length; i++) {
     let card =
-      '<div class="col-lg-4"><div class="card"><img src="../img/' +
+      '<div class="col-lg-4 col-sm-6 col-6"><div class="card"><img src="../img/' +
       recipes[i].image +
       '" class="card-img-top" alt="' +
       recipes[i].name +
       '" /><div class="card-body"><h2>' +
       recipes[i].name +
-      '</h2><p><strong>Description: </strong><span class="description">' +
+      '</h2><p><span class="description">' +
       recipes[i].description +
       '</span><br /><strong>Cook Time: </strong><span id="cook_time">' +
       recipes[i].cookTime +

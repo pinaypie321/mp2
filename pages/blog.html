@@ -14,6 +14,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="../js/navbar.js"></script>
+
     <!-- external CSS -->
     <link rel="stylesheet" href="../css/pages.css" />
 
@@ -35,16 +37,22 @@
   </head>
   <body>
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg">
+
+    <nav class="navbar navbar-expand-sm">
       <div class="navbar-bg"></div>
       <div class="container-fluid nav-blur">
-        <a class="navbar-brand" href="../index.html">FoodGallery</a>
+        <a class="navbar-brand" href="index.html">FoodGallery</a>
         <button
           class="navbar-toggler"
           data-bs-toggle="collapse"
           data-bs-target="#site_navbar"
+          id="nv-tog"
         >
-          <span class="navbar-toggler-icon"></span>
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <!-- <div id="tog-icon"></div> -->
+          <div class="top"></div>
+          <div class="middle"></div>
+          <div class="bottom"></div>
         </button>
         <div
           class="collapse navbar-collapse justify-content-end me-3"
@@ -78,7 +86,7 @@
 
       <div class="anim mt-5">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 text-center">
             <img
               class="blog-img"
               src="https://i.pinimg.com/564x/86/21/cf/8621cf7a22a4adab2c188813876a7eab.jpg"
@@ -106,7 +114,7 @@
       </div>
 
       <div class="anim mt-5">
-        <div class="row">
+        <div class="row flex-column-reverse flex-lg-row">
           <div class="col-lg-6 d-flex align-items-center">
             <div class="blog-intro">
               <h4>Spice Up Your Weeknights: Quick and Easy Dinner Ideas</h4>
@@ -125,7 +133,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 d-flex justify-content-end">
+          <div class="col-lg-6 text-center">
             <img
               class="blog-img"
               src="https://i.pinimg.com/564x/50/6c/01/506c017372bb2cd4e715ac3a51bee463.jpg"
@@ -137,7 +145,7 @@
 
       <div class="anim mt-5">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 text-center">
             <img
               class="blog-img"
               src="https://i.pinimg.com/564x/83/df/ee/83dfee50c40499341228d7165f45e397.jpg"
@@ -165,7 +173,7 @@
       </div>
 
       <div class="anim mt-5">
-        <div class="row">
+        <div class="row flex-column-reverse flex-lg-row">
           <div class="col-lg-6 d-flex align-items-center">
             <div class="blog-intro">
               <h4>Global Flavors at Your Fingertips: A Culinary Journey</h4>
@@ -184,7 +192,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 d-flex justify-content-end">
+          <div class="col-lg-6 text-center">
             <img
               class="blog-img"
               src="https://media.istockphoto.com/id/1307586844/photo/man-watching-video-recipe-on-laptop-and-cooking-at-home.jpg?s=612x612&w=0&k=20&c=xBGSzTW-iVOLRaCXqoTS3Rbc_OeP3OAOP8y1dhGVBHw="
@@ -196,7 +204,7 @@
 
       <div class="anim mt-5">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 text-center">
             <img
               class="blog-img"
               src="https://hips.hearstapps.com/hmg-prod/images/key-lime-pie-mousse-5-1649370548.jpg?crop=0.836xw:1.00xh;0.0812xw,0&resize=980:*"

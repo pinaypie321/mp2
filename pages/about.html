@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- external JS -->
-    <!-- <script src="../js/observer.js"></script> -->
 
     <link
       rel="stylesheet"
@@ -13,6 +12,8 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../js/navbar.js"></script>
 
     <!-- external CSS -->
     <link rel="stylesheet" href="../css/pages.css" />
@@ -36,16 +37,21 @@
   <body id="about-page">
     <!-- Nav Bar -->
 
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-sm">
       <div class="navbar-bg"></div>
       <div class="container-fluid nav-blur">
-        <a class="navbar-brand" href="../index.html">FoodGallery</a>
+        <a class="navbar-brand" href="index.html">FoodGallery</a>
         <button
           class="navbar-toggler"
           data-bs-toggle="collapse"
           data-bs-target="#site_navbar"
+          id="nv-tog"
         >
-          <span class="navbar-toggler-icon"></span>
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <!-- <div id="tog-icon"></div> -->
+          <div class="top"></div>
+          <div class="middle"></div>
+          <div class="bottom"></div>
         </button>
         <div
           class="collapse navbar-collapse justify-content-end me-3"
@@ -56,7 +62,7 @@
               <a class="nav-link" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="active" href="pages/about.html">About</a>
+              <a class="nav-link" id="active" href="about.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="events.html">Events</a>
@@ -71,7 +77,6 @@
         </div>
       </div>
     </nav>
-
     <!-- Nav Bar end -->
 
     <div class="abt">
