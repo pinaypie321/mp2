@@ -3,7 +3,7 @@ $(document).ready(function () {
   const recipeId = urlParams.get("id");
 
   async function getRecipeDetails() {
-    let my_obj = await fetch("http://localhost:4000/api/recipes/" + recipeId);
+    let my_obj = await fetch("https://mp2-api-recipe.onrender.com" + recipeId);
     let my_text = await my_obj.text();
     let recipeDetails = JSON.parse(my_text);
 

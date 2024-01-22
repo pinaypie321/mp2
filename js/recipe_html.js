@@ -42,7 +42,7 @@ function displayRecipes(recipes) {
   }
 }
 
-getData("http://localhost:4000/api/recipes");
+getData("https://mp2-api-recipe.onrender.com");
 
 function searchRecipes() {
   const searchTerm = $("#searchInput").val().toLowerCase();
