@@ -118,7 +118,6 @@
 
 .navbar-bg {
   position: fixed;
-  background-color: red;
   width: 100%;
   height: 80px;
   background: rgba(0, 0, 0, 0.8);
@@ -150,7 +149,7 @@
 }
 
 .navbar-brand:hover {
-  color: orange !important;
+  color: #da8649 !important;
 }
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -176,7 +175,7 @@
   text-align: right;
 }
 #active {
-  color: orange !important;
+  color: #da8649 !important;
 }
 
 @media only screen and (max-width: 576px) {
@@ -453,7 +452,10 @@ body#about-page .about-content {
   color: #da8649;
   background-color: #54351e;
 }
-
+#sign-up {
+  border: #da8649;
+  background-color: #da8649;
+}
 .event-content {
   padding-top: 100px;
 }
@@ -553,31 +555,36 @@ body.contact {
   position: absolute;
 }
 
+.contact-icons img {
+  width: 30px;
+}
+
 .contact-icons span {
   margin-left: 20px;
 }
 
 .contact-icons:nth-child(1) {
   /* background-color: #54351e; */
-  width: 40%;
+  width: 100%;
   top: 0;
 }
 
 .contact-icons:nth-child(2) {
   /* background-color: #f5b78a; */
   top: 40%;
-  width: 40%;
+  width: 100%;
 }
 
 .contact-icons:nth-child(2) img {
   /* background-color: black; */
-  margin-left: 5px;
+  margin-left: 3px;
+  width: 25px;
 }
 
 .contact-icons:nth-child(3) {
   /* background-color: #54351e; */
   bottom: 0;
-  width: 40%;
+  width: 100%;
 }
 
 .contact-section .bottom-left {
@@ -586,6 +593,10 @@ body.contact {
   width: 35%;
   display: flex;
   justify-content: space-between;
+}
+
+.bottom-left img {
+  width: 30px;
 }
 
 .contact-section footer {
@@ -791,8 +802,6 @@ body.contact {
     /* background-color: burlywood; */
     width: 40%;
     transform: translateY(-30px);
-    /* display: flex;
-  justify-content: space-between; */
   }
 
   .contact-icons span {
@@ -800,10 +809,22 @@ body.contact {
   }
 
   .bottom-left img {
-    /* margin-top: 10px; */
-    /* background-color: red; */
     width: 20px;
-    /* display: flex;
-  justify-content: space-between; */
   }
+}
+
+/* @media only screen and (max-width: 576px) {
+  #site_navbar ul {
+    padding: 185px 0;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+} */
+
+#send-btn {
+  background-color: #da8649;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
 }

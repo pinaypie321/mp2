@@ -32,8 +32,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="../img/logo.png" type="image/x-icon" />
+    <script src="../js/events_html.js"></script>
 
-    <title>About</title>
+    <title>Events</title>
   </head>
   <body id="about-page">
     <!-- Nav Bar -->
@@ -41,7 +43,7 @@
     <nav class="navbar navbar-expand-sm">
       <div class="navbar-bg"></div>
       <div class="container-fluid nav-blur">
-        <a class="navbar-brand" href="index.html">FoodGallery</a>
+        <a class="navbar-brand" href="../index.html">FoodGallery</a>
         <button
           class="navbar-toggler"
           data-bs-toggle="collapse"
@@ -125,28 +127,28 @@
                   ></button>
                 </div>
                 <div class="modal-body">
-                  <form>
-                    <div class="mb-3 text-start">
-                      <label for="recipient-name" class="col-form-label"
-                        >email</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="recipient-name"
-                      />
-                    </div>
-                    <div class="mb-3 text-start">
-                      <label for="message-text" class="col-form-label"
-                        >full name</label
-                      >
-                      <input
+                  <form id="accountForm">
+                    <label for="fullName">Full Name:</label>
+                    <input
                       type="text"
-                        class="form-control"
-                        id="message-text"
-                      ></input>
-                    </div>
+                      id="fullName"
+                      name="fullName"
+                      placeholder="Allison Burgers"
+                      required
+                      class="form-control"
+                    />
+                    <br />
+                    <label for="email">Email:</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="allisonburgers@example.com"
+                      required
+                      class="form-control"
+                    />
                   </form>
+                  <div id="result"></div>
                 </div>
                 <div class="modal-footer">
                   <button
@@ -156,7 +158,12 @@
                   >
                     Close
                   </button>
-                  <button type="button" class="btn btn-primary">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    onclick="signUp()"
+                    id="sign-up"
+                  >
                     Register
                   </button>
                 </div>

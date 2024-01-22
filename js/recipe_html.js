@@ -1,21 +1,30 @@
 let recipesData;
 
 async function getData(data) {
-  let my_obj = await fetch(data);
-  let my_text = await my_obj.text();
-  recipesData = JSON.parse(my_text);
+  try {
+    let my_obj = await fetch(data);
+    let my_text = await my_obj.text();
+    recipesData = JSON.parse(my_text);
 
-  let uniqueCategories = Array.from(
-    new Set(recipesData.map((recipe) => recipe.category))
-  );
+    let uniqueCategories = Array.from(
+      new Set(recipesData.map((recipe) => recipe.category))
+    );
 
-  let categoryDropdown = $("#categoryFilter");
+    let categoryDropdown = $("#categoryFilter");
+    categoryDropdown.empty();
 
-  uniqueCategories.forEach((category) => {
-    categoryDropdown.append(`<option value="${category}">${category}</option>`);
-  });
+    categoryDropdown.append(`<option value="all">All</option>`);
 
-  displayRecipes(recipesData);
+    uniqueCategories.forEach((category) => {
+      categoryDropdown.append(
+        `<option value="${category}">${category}</option>`
+      );
+    });
+
+    displayRecipes(recipesData);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
 }
 
 function displayRecipes(recipes) {
@@ -42,7 +51,7 @@ function displayRecipes(recipes) {
   }
 }
 
-getData("http://localhost:4000/api/recipes");
+getData("https://mp2-api-recipe.onrender.com/api/recipes/");
 
 function searchRecipes() {
   const searchTerm = $("#searchInput").val().toLowerCase();
@@ -64,9 +73,9 @@ function searchRecipes() {
     }
   });
 
-  if (found == false) {
+  if (!found) {
     $("#recipe_gallery").append(
-      "<div class='row'><div class='col-lg-6 offset-lg-3 text-center'><p>No recipe found</p></div></div>"
+      "<div class='row'><div class='col-lg-6 offset-lg-3 text-center'><h1>No recipe found</h1></div></div>"
     );
   }
 }
@@ -75,12 +84,12 @@ function filterByCategory() {
   const selectedCategory = $("#categoryFilter").val().toLowerCase();
   let filteredRecipes;
 
-  if (selectedCategory) {
+  if (selectedCategory === "all") {
+    filteredRecipes = recipesData;
+  } else {
     filteredRecipes = recipesData.filter(
       (recipe) => recipe.category.toLowerCase() === selectedCategory
     );
-  } else {
-    filteredRecipes = recipesData;
   }
 
   displayRecipes(filteredRecipes);
