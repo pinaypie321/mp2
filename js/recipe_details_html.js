@@ -5,7 +5,7 @@ $(document).ready(function () {
   async function getRecipeDetails() {
     try {
       let my_obj = await fetch(
-        "https://mp2-api-recipe.onrender.com/api/recipes/" + recipeId
+        "https://api-recipe-r3xo.onrender.com/api/recipes/" + recipeId
       );
       let my_text = await my_obj.text();
       let recipeDetails = JSON.parse(my_text);

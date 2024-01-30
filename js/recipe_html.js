@@ -51,7 +51,7 @@ function displayRecipes(recipes) {
   }
 }
 
-getData("https://mp2-api-recipe.onrender.com/api/recipes/");
+getData("https://api-recipe-r3xo.onrender.com/api/recipes/");
 
 function searchRecipes() {
   const searchTerm = $("#searchInput").val().toLowerCase();
@@ -67,7 +67,6 @@ function searchRecipes() {
       recipeCategory.includes(searchTerm)
     ) {
       $(this).show();
-      found = true;
     } else {
       $(this).hide();
     }
